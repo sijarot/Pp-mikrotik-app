@@ -54,7 +54,7 @@
     :local userExist [find name=$pppNama]
     :if ([:len $userExist] = 0) do={
         # Di sini comment diisi dengan $expDate (tanggal kedaluwarsa hasil hitungan otomatis)
-        add name=$pppNama password=$pppSandi profile=$pppPaket service=$pppService comment=$expDate
+        add name=$pppNama password=$pppSandi profile=$pppPaket service=$pppService comment=$date
         :local msg0 "PPPoE%20Bulanan:%20Pelanggan%20baru%20$pppNama%20berhasil%20ditambahkan.%20Paket:%20$pppPaket.%20Masa%20Aktif%20S/D%20$expDate."
         :log warning "PPPoE Bulanan: Pelanggan baru $pppNama berhasil ditambahkan."
         /tool fetch url="https://api.telegram.org/bot$botToken/sendMessage?chat_id=$chatId&text=$msg0" check-certificate=no keep-result=no
