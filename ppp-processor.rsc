@@ -6,7 +6,7 @@
 :global botToken
 :global chatId
 
-# --- PROSES MAJU 1 BULAN (FORMAT MMM/DD/YYYY) ---
+# --- AMBIL TANGGAL SEKARANG (FORMAT MMM/DD/YYYY) ---
 :local dateNow [/system clock get date]
 
 # Proses verifikasi dan pembuatan akun ke PPP Secret menggunakan variabel global
